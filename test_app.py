@@ -4,7 +4,8 @@ Run via GitHub Actions CI workflow.
 """
 
 from app import add, divide, multiply, subtract
-
+import os
+import requests
 
 def test_add():
     assert add(2, 3) == 5

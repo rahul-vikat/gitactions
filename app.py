@@ -1,7 +1,6 @@
 """
 Simple Python module demonstrating functions to test with GitHub Actions CI.
 """
-
 def add(a, b):
     """Add two numbers together."""
     return a + b

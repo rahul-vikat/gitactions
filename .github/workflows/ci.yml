@@ -18,7 +18,16 @@ jobs:
       
       - name: Install dependencies
         run: |
-          python -m pip install pytest
+          python -m pip install pytest ruff mypy
       
+      - name: Run ruff (linting and formatting)
+        run: ruff check .
+
+      - name: Run ruff (fix auto-fixable issues)
+        run: ruff check . --fix
+
+      - name: Run mypy (type checking)
+        run: mypy app.py
+
       - name: Run pytest
         run: pytest
